@@ -1,0 +1,31 @@
+{
+  "name": "gulp-post",
+  "version": "0.0.1",
+  "description": "post buffer to current url on pipe.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/zhso/gulp-post.git"
+  },
+  "keywords": [
+    "gulp",
+    "gulpplugin",
+    "post"
+  ],
+  "bugs": {
+    "url": "https://github.com/zhso/gulp-post/issues",
+    "email": "s@zhso.net"
+  },
+  "homepage": "https://github.com/zhso/gulp-post",
+  "author": "s@zhso.net",
+  "license": "MIT",
+  "devDependencies": {
+    "colors": "^1.1.2",
+    "gulp-util": "^3.0.7",
+    "request": "^2.69.0",
+    "through2": "^2.0.0"
+  }
+}
