@@ -22,7 +22,7 @@
   "homepage": "https://github.com/zhso/gulp-post",
   "author": "s@zhso.net",
   "license": "MIT",
-  "devDependencies": {
+  "dependencies": {
     "colors": "^1.1.2",
     "gulp-util": "^3.0.7",
     "request": "^2.69.0",
