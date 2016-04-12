@@ -1,14 +1,13 @@
 "use strict";
 const post = require("request").post;
 const obj = require("through2").obj;
-require("colors");
 const pluginError = require("gulp-util").PluginError;
 const PLUGIN_NAME = "gulp-post";
 /**
  * @param url {String}
  * @param options {Object}
  * @return {Function}
- * @sample
+ * @example
  * gulp.src("folder").pipe(post("http://zhso.net/"));
  */
 module.exports = (url, options)=> {
@@ -24,18 +23,14 @@ module.exports = (url, options)=> {
             post({
                 url: url,
                 form: (opt=> {
-                    opt.content = file.toString(opt.encoding || null);
+                    opt.content = file.contents.toString(opt.encoding || null);
                     opt.relative = file.relative;
                     return opt;
                 })(option)
             }, (err, response, body)=> {
                 option.callback && option.callback(err, body);
                 if (err) {
-                    console.error(err.red);
-                } else if (response.statusCode !== 200) {
-                    console.error(("'" + file.relative + "' " + response.statusCode).red);
-                } else {
-                    console.log(body);
+                    throw new pluginError(PLUGIN_NAME, err);
                 }
             });
         }

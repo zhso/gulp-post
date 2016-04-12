@@ -1,10 +1,10 @@
 {
   "name": "gulp-post",
-  "version": "1.0.1",
+  "version": "1.0.2",
   "description": "post buffer to current url on pipe.",
   "main": "index.js",
   "scripts": {
-    "test": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha -report lcovonly -V"
+    "test": "./node_modules/.bin/istanbul cover ./node_modules/mocha/bin/_mocha -report lcovonly"
   },
   "repository": {
     "type": "git",
@@ -23,12 +23,14 @@
   "author": "s@zhso.net",
   "license": "MIT",
   "dependencies": {
-    "colors": "^1.1.2",
     "gulp-util": "^3.0.7",
     "request": "^2.69.0",
     "through2": "^2.0.1"
   },
   "devDependencies": {
-    "eslint": "^2.5.3"
+    "chai": "^3.5.0",
+    "eslint": "^2.5.3",
+    "gulp": "^3.9.1",
+    "mocha": "^2.4.5"
   }
 }
